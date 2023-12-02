@@ -115,4 +115,4 @@ def main(page:Page):
 
     page.add(minha_aplicacao)
 
-app(target=main)
+app(target=main,view=WEB_BROWSER)
