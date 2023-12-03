@@ -5,12 +5,16 @@ import mysql.connector as mysql
 
 conexao = mysql.connect(
     user = 'root',
-    host = 'localhost',
-    password ='minhasenha123',
-    database ='clientes',
-    port = 3306
+    host = 'monorail.proxy.rlwy.net',
+    password ='hGd32H-5H5e5Ca4d3ABBcdcf1G44aCGa',
+    database ='railway',
+    port = 47046
 )
 cursor = conexao.cursor()
+
+# criar tabela
+
+cursor.execute("CREATE TABLE IF NOT EXISTS agendamentos (id INTEGER PRIMARY KEY AUTO_INCREMENT, nome varchar(40), dia INT, hora INT)")
 
 class App(UserControl):
     def __init__(self):
